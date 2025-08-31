@@ -113,10 +113,9 @@ Browse events/purchase ticket.
 
 Scan QR code at entry.
 
-Earn loyalty tokens after ticket burn.
-
 Screenshots
-Include diagram, ticket sample, or dashboard preview.
+
+<img width="1912" height="845" alt="Screenshot 2025-08-31 065606" src="https://github.com/user-attachments/assets/88b30a78-fa63-4f37-8976-58b2e2a9adbf" />
 
 
 License
