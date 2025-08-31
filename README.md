@@ -82,9 +82,8 @@ Coinbase (for testing and Wallet Integration)
 Firebase account and IPFS/Pinata API keys
 
 Installation
-bash
-git clone https://github.com/yourusername/dynamic-nft-ticketing.git
-cd dynamic-nft-ticketing
+
+cd NFTi
 npm install                   # for both backend and app folders
 npx hardhat compile           # Compile contracts
 npm start                     # Start frontend and backend servers
