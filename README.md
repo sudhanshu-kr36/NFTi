@@ -1,2 +1,131 @@
 # NFTi
 Dynamic NFT ticketing system
+
+Overview
+Dynamic NFT Ticketing System is a full-stack web application that revolutionizes event ticketing by leveraging blockchain technology, dynamic NFTs (Non-Fungible Tokens), and loyalty rewards. With this platform, organizers can create secure event tickets as NFTs, users can purchase and verify tickets easily, and attendees earn ERC-20 loyalty tokens for their participation.
+
+Features
+Event Creation
+Organizers can create events with custom ticket tiers (Gold, Silver, Default), set date/time, location, price, and seat limits.
+
+NFT Ticketing
+Each ticket is minted on blockchain as a unique NFT. It includes metadata, QR code for verification, and owner info.
+
+Marketplace
+Users can browse available events and purchase NFT tickets directly via integrated Web3 wallet.
+
+Attendee Verification
+QR code scanning enables fast, secure check-in. Used (burned) tickets trigger reward minting.
+
+Loyalty Reward System
+Attendees receive ERC-20 loyalty tokens once their ticket has been checked in (burned). These tokens can be tracked in their wallet and used for future event rewards.
+
+Sales Analytics & Management
+Organizers can track ticket sales, revenue, and participant verification in real time.
+
+Technology Stack
+Layer	Technology
+Frontend	React, TypeScript, Chakra UI, Framer Motion
+Blockchain	Klaytn (or Ethereum), Hardhat, OpenZeppelin
+Storage/Backend	Firebase, IPFS, Express.js, Pinata
+Loyalty Token	ERC-20 Smart Contract
+Wallet Integration	MetaMask, ethers.js
+QR Code Management	react-qr-reader, html2canvas
+Folder Structure
+text
+NFTi/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── ...
+├── app/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Events/
+│   │   │   │   └── Create.tsx
+│   │   │   ├── Tickets/
+│   │   │   │   ├── BuyTicket.tsx
+│   │   │   │   ├── TicketForm.tsx
+│   │   │   │   ├── CheckTicket.tsx
+│   │   │   │   ├── OwnerTicketsList.tsx
+│   │   │   │   ├── Sales.tsx
+│   │   │   │   └── TicketScanner.tsx
+│   │   ├── contexts/
+│   │   │   └── Web3Context.tsx
+│   │   ├── scripts/
+│   │   │   └── deploy.ts
+│   │   └── ...
+│   ├── package.json
+├── hardhat.config.ts
+├── firebase.json
+└── ...
+How It Works
+Create Event:
+Organizer enters event details, selects ticket types, sets price/limits, and deploys event smart contract.
+
+Mint Tickets:
+Tickets are generated as dynamic NFTs stored on the blockchain and metadata on IPFS.
+
+Purchase:
+Users connect their wallet, buy tickets, and receive NFTs representing entry rights.
+
+Verification:
+At the event, QR codes are scanned at entry. Verified tickets are burned.
+
+Getting Started
+Prerequisites
+Node.js, npm
+
+Coinbase (for testing and Wallet Integration)
+
+Firebase account and IPFS/Pinata API keys
+
+Installation
+bash
+git clone https://github.com/yourusername/dynamic-nft-ticketing.git
+cd dynamic-nft-ticketing
+npm install                   # for both backend and app folders
+npx hardhat compile           # Compile contracts
+npm start                     # Start frontend and backend servers
+Environment Variables
+Set blockchain RPC URLs, wallet private keys, and Pinata API keys in .env.
+
+Smart Contracts
+EventTicketNft.sol: ERC-721 for ticket NFTs, includes burn/verify logic and loyalty interop.
+
+API Endpoints
+/upload (Backend): Uploads ticket images to IPFS via Pinata.
+
+Blockchain calls: Mint, burn, reward loyalty handled via frontend (ethers.js).
+
+Usage
+Organizer:
+
+Create an event.
+
+Configure ticket types and deploy contract.
+
+Track sales and participant verification.
+
+Attendee:
+
+Browse events/purchase ticket.
+
+Scan QR code at entry.
+
+Earn loyalty tokens after ticket burn.
+
+Screenshots
+Include diagram, ticket sample, or dashboard preview.
+
+
+License
+MIT (or as per your choice)
+
+Authors
+[Two_Pointers Team]
+
+
+Ready to bring transparency, security, and rewards to event ticketing!
+
