@@ -84,9 +84,15 @@ Firebase account and IPFS/Pinata API keys
 Installation
 
 cd NFTi
-npm install                   # for both backend and app folders
-npx hardhat compile           # Compile contracts
-npm start                     # Start frontend and backend servers
+# for both backend and app folders
+npm install                   
+
+# Compile contracts
+npx hardhat compile           
+
+# Start frontend and backend servers
+npm start
+
 Environment Variables
 Set blockchain RPC URLs, wallet private keys, and Pinata API keys in .env.
 
