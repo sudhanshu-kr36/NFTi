@@ -1,7 +1,7 @@
 # NFTi
 Dynamic NFT ticketing system
 
-Overview
+## Overview
 Dynamic NFT Ticketing System is a full-stack web application that revolutionizes event ticketing by leveraging blockchain technology, dynamic NFTs (Non-Fungible Tokens), and loyalty rewards. With this platform, organizers can create secure event tickets as NFTs, users can purchase and verify tickets easily, and attendees earn ERC-20 loyalty tokens for their participation.
 
 Features
@@ -23,44 +23,18 @@ Attendees receive ERC-20 loyalty tokens once their ticket has been checked in (b
 Sales Analytics & Management
 Organizers can track ticket sales, revenue, and participant verification in real time.
 
-Technology Stack
+## Technology Stack
 Layer	Technology
+
 Frontend	React, TypeScript, Chakra UI, Framer Motion
 Blockchain	Klaytn (or Ethereum), Hardhat, OpenZeppelin
 Storage/Backend	Firebase, IPFS, Express.js, Pinata
 Loyalty Token	ERC-20 Smart Contract
 Wallet Integration	MetaMask, ethers.js
 QR Code Management	react-qr-reader, html2canvas
-Folder Structure
-text
-NFTi/
-├── backend/
-│   ├── server.js
-│   ├── package.json
-│   └── ...
-├── app/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Events/
-│   │   │   │   └── Create.tsx
-│   │   │   ├── Tickets/
-│   │   │   │   ├── BuyTicket.tsx
-│   │   │   │   ├── TicketForm.tsx
-│   │   │   │   ├── CheckTicket.tsx
-│   │   │   │   ├── OwnerTicketsList.tsx
-│   │   │   │   ├── Sales.tsx
-│   │   │   │   └── TicketScanner.tsx
-│   │   ├── contexts/
-│   │   │   └── Web3Context.tsx
-│   │   ├── scripts/
-│   │   │   └── deploy.ts
-│   │   └── ...
-│   ├── package.json
-├── hardhat.config.ts
-├── firebase.json
-└── ...
-How It Works
+
+## How It Works
+
 Create Event:
 Organizer enters event details, selects ticket types, sets price/limits, and deploys event smart contract.
 
@@ -73,24 +47,26 @@ Users connect their wallet, buy tickets, and receive NFTs representing entry rig
 Verification:
 At the event, QR codes are scanned at entry. Verified tickets are burned.
 
-Getting Started
+## Getting Started
 Prerequisites
+
 Node.js, npm
 
 Coinbase (for testing and Wallet Integration)
 
 Firebase account and IPFS/Pinata API keys
 
-Installation
+# Installation
 
-cd NFTi
-# for both backend and app folders
+cd NFTi    (after clonning the github repository)
+
+### for both backend and app folders
 npm install                   
 
-# Compile contracts
+### Compile contracts
 npx hardhat compile           
 
-# Start frontend and backend servers
+### Start frontend and backend servers
 npm start
 
 Environment Variables
@@ -104,7 +80,8 @@ API Endpoints
 
 Blockchain calls: Mint, burn, reward loyalty handled via frontend (ethers.js).
 
-Usage
+## Usage
+
 Organizer:
 
 Create an event.
@@ -119,13 +96,13 @@ Browse events/purchase ticket.
 
 Scan QR code at entry.
 
-Screenshots
+# Screenshots
 
 <img width="1912" height="845" alt="Screenshot 2025-08-31 065606" src="https://github.com/user-attachments/assets/88b30a78-fa63-4f37-8976-58b2e2a9adbf" />
 
 
-License
-MIT (or as per your choice)
+# License
+MIT (or any)
 
 Authors
 [Two_Pointers Team]
